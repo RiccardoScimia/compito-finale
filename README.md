@@ -45,11 +45,14 @@ Presta attenzione alle transizioni, devono essere fluide e piacevoli.
 
 Tutti i pulsanti hanno questo effetto al passaggio del mouse:
 
-<video controls src="docs/Screen Recording 2025-09-28 at 22.42.26.mov" title="Title"></video>
+https://github.com/user-attachments/assets/206423a2-1aa9-4eb5-8cbf-cc7b85d26a9f
+
 
 ### Pulsanti a comparsa
 
-<video controls src="docs/Screen Recording 2025-09-28 at 22.44.31.mov" title="Title"></video>
+
+https://github.com/user-attachments/assets/9f5cdad1-13d8-44d7-983a-19d646ca37a0
+
 
 ## Note finali
 
