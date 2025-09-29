@@ -1,11 +1,508 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yamaha</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./src/style.css" />
-  </head>
-  <body></body>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yamaha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body class="bg-gray-200 text-black">
+
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4 rm-10">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="/public/logo.svg" alt="Logo" class="h-10">
+    </div>
+
+<!-- Navbar -->
+<nav class="hidden md:flex space-x-4 md:space-x-6">
+  <a href="#" class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold hover:text-gray-500">I NOSTRI MODELLI</a>
+  <a href="#" class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold hover:text-gray-500">ACCESSORI</a>
+  <a href="#" class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold hover:text-gray-500">ABBIGLIAMENTO & MERCHANDISE</a>
+  <a href="#" class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold hover:text-gray-500">EVENTI & EXPERIENCE</a>
+  <a href="#" class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold hover:text-gray-500">SERVIZI & MANUTENZIONE</a>
+</nav>
+
+<!-- Bottoni -->
+<div class="hidden md:flex items-center space-x-2 sm:space-x-4">
+  <button class="bg-gray-400 text-white px-2 sm:px-3 py-1 sm:py-2 rounded text-sm sm:text-base hover:bg-gray-500 transition flex items-center space-x-1">
+    <span>Account</span>
+  </button>
+  <button class="bg-gray-400 text-white px-2 sm:px-3 py-1 sm:py-2 rounded text-sm sm:text-base hover:bg-gray-500 transition flex items-center space-x-1">
+    <span>Carrello</span>
+  </button>
+</div>
+
+
+    <!-- Menu Mobile -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-blue-50">
+    <a href="#" class="block px-4 py-2 hover:bg-blue-100">I NOSTRI MODELLI</a>
+    <a href="#" class="block px-4 py-2 hover:bg-blue-100">ACCESSORI</a>
+    <a href="#" class="block px-4 py-2 hover:bg-blue-100">ABBIGLIAMENTO & MERCHANDISE</a>
+    <a href="#" class="block px-4 py-2 hover:bg-blue-100">EVENTI & EXPERIENCE</a>
+    <a href="#" class="block px-4 py-2 hover:bg-blue-100">SERVIZI & MANUTENZIONE</a>
+    <div class="flex flex-col px-4 py-2 space-y-2">
+      <button class="bg-gray-400 text-white px-3 py-2 rounded hover:bg-gray-500 transition flex items-center space-x-1">
+        <span>Account</span>
+      </button>
+      <button class="bg-gray-400 text-white px-3 py-2 rounded hover:bg-gray-500 transition flex items-center space-x-1">
+        <span>Carrello</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <section class="relative w-full h-[500px] overflow-hidden">
+    <!-- Immagine animata -->
+    <div class="flex flex-wrap gap-6">
+      <img src="/public/hero-1900.webp" alt="Yamaha Hero" class="w-full h-full object-cover animate-slide">
+    </div>
+
+    <!-- Overlay sfumata in basso -->
+    <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
+      <h1 class="text-white text-4xl md:text-6xl font-bold">Riparti con il piede giusto</h1>
+      <p class="text-white mt-2 text-lg md:text-2xl">Tutta la gamma moto con finanziamento YOU EasyGO a tasso agevolato
+        e la prima rata la paghi nel 2026.</p>
+    </div>
+  </section>
+
+  <section class="container mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+      <img src="/public/domina-i-sentieri-1900.webp" alt="Nuovo modello" class="w-full h-48 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <p class="text-gray-600">domina i sentieri con la</p>
+        <h3 class="text-xl font-semibold">NUOVA WR125R</h3>
+        <button class="bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition mt-auto">Scopri ora</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+      <img src="/public/vantaggio-scooter-1900.jpeg" alt="Scooter" class="w-full h-48 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <p class="text-gray-600">vantaggi scooter</p>
+        <h3 class="text-xl font-semibold">RIPARTI CON IL PIEDE GIUSTO</h3>
+        <button class="bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition mt-auto">Scopri ora</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+      <img src="/public/moto-scooter-1900.webp" alt="Moto e scooter" class="w-full h-48 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <p class="text-gray-600">moto & scooter</p>
+        <h3 class="text-xl font-semibold">VANTAGGI</h3>
+        <button class="bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition mt-auto">Scopri ora</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col">
+      <img src="/public/whatsapp-1900.webp" alt="Whatsapp" class="w-full h-48 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <p class="text-gray-600">il tuo legame diretto con il mondo Yamaha</p>
+        <h3 class="text-xl font-semibold">ENTRA NEL CANALE WHATSAPP</h3>
+        <button class="bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition mt-auto">Iscriviti ora</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Prima card speciale -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="/public/kando-1900.webp" alt="SPIRIT OF CHALLENGE" class="w-full h-96 object-cover">
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+        <p class="text-white mt-2 text-lg">70 anni di storia</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">SPIRIT OF CHALLENGE</h2>
+        <p class="text-white mt-2 font text-sm">Quest'anno celebriamo un traguardo straordinario: 70 anni. Un
+          anniversario che abbiamo onorato con un evento speciale, un documentario emozionante e un podcast esclusivo.
+        </p>
+        <button class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition">
+          Scopri di più
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seconda card speciale -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="/public/lineup-1900.webp" alt="LINEUP MODEL YEAR 2025" class="w-full h-96 object-cover">
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+        <p class="text-white mt-2 text-lg">focus on</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">LINEUP MODEL YEAR 2025</h2>
+        <p class="text-white mt-2 font text-sm">Entra nel cuore dell'innovazione: Fabrizio Corsi, PR & Product Dept.
+          Manager, ci guida alla scoperta delle caratteristiche tecniche, del design e delle performance della nostra
+          nuova gamma 2025.</p>
+        <button class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition"> Scopri di più
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione geolocalizzazione -->
+  <section class="container mx-auto px-6 py-12 bg-gray-100 rounded-lg shadow-md">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Trova il concessionario più vicino</h2>
+    <p class="text-center text-gray-600 mb-6">Inserisci il tuo CAP per visualizzare i concessionari Yamaha nella tua
+      zona.</p>
+
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+      <input type="text" placeholder="Inserisci il tuo CAP"
+        class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-700">
+      <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 transition">
+        Cerca
+      </button>
+    </div>
+  </section>
+
+<!--Sezione catalogo categorie-->
+<section class="container mx-auto px-6 py-12">
+  <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Esplora Yamaha</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+    <!-- Card 1 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/moto.webp" alt="Moto" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Moto</h3>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/scooter.webp" alt="Scooter" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Scooter</h3>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/bicycle.webp" alt="eBikes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">eBikes</h3>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/fuoribordo.jpg" alt="Motori fuoribordo" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Motori fuoribordo</h3>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/moto-acqua.webp" alt="Moto d'acqua" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Moto d'acqua</h3>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/package.webp" alt="Package" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Package</h3>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/atv.webp" alt="ATV & Side by Side" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">ATV & Side by Side</h3>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/leggeri.webp" alt="Veicoli leggeri" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Veicoli leggeri</h3>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/accessori.webp" alt="Accessori" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Accessori</h3>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/merch.webp" alt="Abbigliamento & Merchandise" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Abbigliamento & Merchandise</h3>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/oli.webp" alt="Oli" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Oli</h3>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition">
+      <img src="/public/pulizia.webp" alt="Pulizia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+      <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold px-2 bg-black/50 rounded">Pulizia</h3>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <section class="container mx-auto px-6 py-12">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="/public/prenota-test-ride.webp" alt="LINEUP MODEL YEAR 2025" class="w-full h-96 object-cover">
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">PRENOTA UN TEST RIDE</h2>
+        <button class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition"> Scopri di più
+        </button>
+      </div>
+    </div>
+  </section>
+
+<section class="container mx-auto px-6 py-12">
+  <div class="flex flex-wrap gap-6 justify-center">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition w-full md:w-1/3">
+      <img src="/public/experience.webp" alt="Experience" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <p class="text-gray-600">Domina i sentieri con la</p>
+        <h3 class="text-xl font-semibold">NUOVA WR125R</h3>
+        <button class="mt-3 bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition">
+          Scopri ora
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition w-full md:w-1/3">
+      <img src="/public/partner.webp" alt="Partner" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <p class="text-gray-600">Domina i sentieri con la</p>
+        <h3 class="text-xl font-semibold">NUOVA WR125R</h3>
+        <button class="mt-3 bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition">
+          Scopri ora
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition w-full md:w-1/3">
+      <img src="/public/noleggia.webp" alt="Noleggia" class="w-full h-56 object-cover">
+      <div class="p-4 text-center">
+        <p class="text-gray-600">Domina i sentieri con la</p>
+        <h3 class="text-xl font-semibold">NUOVA WR125R</h3>
+        <button class="mt-3 bg-white text-black px-4 py-2 rounded border hover:bg-gray-300 transition">
+          Scopri ora
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- sezione Destination Yamaha Motor -->
+  <section class="container mx-auto px-6 py-12 flex justify-center">
+    <div
+      class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col items-center text-center max-w-2xl">
+
+      <div class="flex justify-center w-full bg-gray-100">
+        <img src="/public/destination-yamaha.webp" alt="Nuovo modello" class="max-h-96 object-contain" />
+      </div>
+
+      <div class="p-6 text-left">
+        <p class="text-gray-600">Un mondo di avventure per tutti</p>
+        <h3 class="text-2xl font-bold mt-2">DESTINATION YAMAHA MOTOR</h3>
+        <p class="text-gray-600 ">Destination Yamaha Motor è una piattaforma di viaggio online rivolta a tutti coloro che hanno una passione per l'avventura e il desiderio di scoprire nuove ed emozionanti esperienze con i mezzi Yamaha.</p>
+        <button class="mt-4 bg-white text-black px-6 py-2 rounded border hover:bg-gray-300 transition">
+          Scopri ora
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ultima sezione -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+      <img src="/public/about-us.webp" alt="LINEUP MODEL YEAR 2025" class="w-full h-96 object-cover">
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">PRENOTA UN TEST RIDE</h2>
+        <p class="text-white ">Destination Yamaha Motor è una piattaforma di viaggio online rivolta a tutti coloro che hanno una passione per l'avventura e il desiderio di scoprire nuove ed emozionanti esperienze con i mezzi Yamaha.</p>
+        <button class="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition"> SCOPRI YAMAHA
+        </button>
+      </div>
+    </div>
+  </section>
+
+</body>
+<!-- FOOTER -->
+<footer class="bg-[#0f1113] text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- ACCORDION -->
+    <div class="space-y-2">
+      <!-- ITEM -->
+      <details class="group border-t border-white/10">
+        <summary
+          class="flex items-center justify-between py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+          <span class="uppercase font-extrabold tracking-wide">Corporate</span>
+          <span
+            class="w-7 h-7 grid place-items-center rounded bg-white/10 text-white/90 transition group-open:rotate-45">+</span>
+        </summary>
+        <nav class="pb-4 text-sm text-white/80 grid grid-cols-1 sm:grid-cols-2 gap-2 pl-1">
+          <a class="hover:underline" href="#">Chi siamo</a>
+          <a class="hover:underline" href="#">Lavora con noi</a>
+          <a class="hover:underline" href="#">Stampa</a>
+          <a class="hover:underline" href="#">Contatti</a>
+        </nav>
+      </details>
+
+      <details class="group border-t border-white/10">
+        <summary
+          class="flex items-center justify-between py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+          <span class="uppercase font-extrabold tracking-wide">B2B</span>
+          <span
+            class="w-7 h-7 grid place-items-center rounded bg-white/10 text-white/90 transition group-open:rotate-45">+</span>
+        </summary>
+        <nav class="pb-4 text-sm text-white/80 grid grid-cols-1 sm:grid-cols-2 gap-2 pl-1">
+          <a class="hover:underline" href="#">Rete vendita</a>
+          <a class="hover:underline" href="#">Fleet</a>
+          <a class="hover:underline" href="#">Partnership</a>
+        </nav>
+      </details>
+
+      <details class="group border-t border-white/10">
+        <summary
+          class="flex items-center justify-between py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+          <span class="uppercase font-extrabold tracking-wide">Più Yamaha</span>
+          <span
+            class="w-7 h-7 grid place-items-center rounded bg-white/10 text-white/90 transition group-open:rotate-45">+</span>
+        </summary>
+        <nav class="pb-4 text-sm text-white/80 grid grid-cols-1 sm:grid-cols-2 gap-2 pl-1">
+          <a class="hover:underline" href="#">Eventi</a>
+          <a class="hover:underline" href="#">Community</a>
+          <a class="hover:underline" href="#">Store</a>
+        </nav>
+      </details>
+
+      <details class="group border-y border-white/10">
+        <summary
+          class="flex items-center justify-between py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+          <span class="uppercase font-extrabold tracking-wide">Supporto</span>
+          <span
+            class="w-7 h-7 grid place-items-center rounded bg-white/10 text-white/90 transition group-open:rotate-45">+</span>
+        </summary>
+        <nav class="pb-4 text-sm text-white/80 grid grid-cols-1 sm:grid-cols-2 gap-2 pl-1">
+          <a class="hover:underline" href="#">Assistenza</a>
+          <a class="hover:underline" href="#">Garanzia</a>
+          <a class="hover:underline" href="#">Manuali</a>
+        </nav>
+      </details>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="pt-6">
+      <h4 class="uppercase font-extrabold mb-2">Newsletter</h4>
+      <p class="text-white/80 text-sm mb-3">
+        Conoscerai in anteprima le ultime offerte, gli eventi speciali, le nuove uscite e molto altro
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="email" placeholder="Inserisci la tua e-mail" class="w-full h-12 rounded-md bg-white text-black px-4 text-[15px]
+                      border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">
+        <button class="h-12 px-5 rounded-md bg-[#d93a2f] hover:bg-[#e0281b] font-semibold whitespace-nowrap">
+          ISCRIVITI
+        </button>
+      </div>
+
+      <!-- Lingua + Social -->
+      <div class="mt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <!-- Lingua -->
+        <button class="inline-flex items-center gap-2 rounded-md border border-white/15 px-3 py-2">
+          <span class="inline-flex overflow-hidden rounded-[2px]">
+            <span class="w-3 h-3 bg-[#009246]"></span>
+            <span class="w-3 h-3 bg-white"></span>
+            <span class="w-3 h-3 bg-[#CE2B37]"></span>
+          </span>
+          <span class="text-sm">Italy (Italian)</span>
+        </button>
+
+        <!-- Social -->
+        <div class="flex items-center gap-3 text-white/90">
+          <a href="https://www.youtube.com/user/YamahaMotorItalia" aria-label="YouTube " target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 grid place-items-center">
+            <!-- YouTube -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32.6 32.6 0 0 0 0 12a32.6 32.6 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.7.5 9.3.5 9.3.5s7.6 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32.6 32.6 0 0 0 24 12a32.6 32.6 0 0 0-.5-5.8zM9.6 15.5v-7l6 3.5-6 3.5z" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/YamahaMotorItalia/" aria-label="Facebook" target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 grid place-items-center">
+            <!-- Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.3V12h2.3V9.7c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.5.7-1.5 1.4V12h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/yamahamotorit/" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 grid place-items-center">
+            <!-- Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6.2-2.9a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- COPYRIGHT + LEGAL -->
+      <p class="mt-6 text-xs text-white/70">
+        © Copyright - 2025 Yamaha Motor Europe N.V. - All Rights Reserved
+      </p>
+      <div class="mt-2 text-xs text-white/70 flex flex-wrap gap-x-6 gap-y-2">
+        <a class="hover:underline" href="#">Informativa sulla privacy</a>
+        <a class="hover:underline" href="#">Cookies</a>
+        <a class="hover:underline" href="#">Note legali</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>
